@@ -35,8 +35,3 @@ Start using Click Points by clicking on the buttons in the Click Points Widget. 
 Check on your progress by visiting your User Points Shortcode Page.
 
 Cash in your Points for Rewards on your Rewards Shortcode Page.  These Rewards will be reflected on the User Points Shortcode Page, under "Recent Points".
-
-
-
-
-

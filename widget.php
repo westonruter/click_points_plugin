@@ -187,4 +187,3 @@ class cpjr3_widget extends WP_Widget {
 } // end class example_widget
 
 add_action( 'widgets_init', create_function( '', 'return register_widget( "cpjr3_widget" );' ) );
-

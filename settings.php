@@ -182,5 +182,3 @@ function validate_cpjr3_settings( $input ) {
 
 
 function section_cb() {}
-
-
