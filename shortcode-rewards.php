@@ -12,11 +12,11 @@ function cpjr3_rewards_shortcode() {
 
 	echo "<p>";
 
-	esc_html_e( 'Click to purchase a Reward.  Results will show up on your Click Points User Page.', '$cpjr3' );
+	esc_html_e( 'Click to purchase a Reward.  Results will show up on your Click Points User Page.', 'cpjr3' );
 
 	echo "</p><p>";
 
-	esc_html_e( 'Refresh the page to view more Rewards', '$cpjr3' );
+	esc_html_e( 'Refresh the page to view more Rewards', 'cpjr3' );
 
 	echo "</p>";
 

@@ -73,7 +73,7 @@ function cpjr3_process() {
 
 function cpjr3_must_login() {
 
-	echo "Want to earn points?  Log in or Sign up!";
+	_e( "Want to earn points?  Log in or Sign up!", 'cpjr3' );
 
 	die();
 

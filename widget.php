@@ -63,7 +63,7 @@ class CPJR3_Widget extends WP_Widget {
 
 				"Like" => array(
 
-					"title" => "Like",
+					"title" => __( "Like", 'cpjr3' ),
 
 					"link" => "like_link",
 
@@ -75,7 +75,7 @@ class CPJR3_Widget extends WP_Widget {
 
 				"Share" => array(
 
-					"title" => "Share",
+					"title" => __( "Share", 'cpjr3' ),
 
 					"link" => "share_link",
 
@@ -87,7 +87,7 @@ class CPJR3_Widget extends WP_Widget {
 
 				"Post" => array(
 
-					"title" => "Post",
+					"title" => __( "Post", 'cpjr3' ),
 
 					"link" => "post_link",
 
@@ -99,7 +99,7 @@ class CPJR3_Widget extends WP_Widget {
 
 				"Link" => array(
 
-					"title" => "Link",
+					"title" => __( "Link", 'cpjr3' ),
 
 					"link" => "link_link",
 
@@ -111,7 +111,7 @@ class CPJR3_Widget extends WP_Widget {
 
 				"Tweet" => array(
 
-					"title" => "Tweet",
+					"title" => __( "Tweet", 'cpjr3' ),
 
 					"link" => "tweet_link",
 
@@ -186,7 +186,7 @@ class CPJR3_Widget extends WP_Widget {
 
 		</p>
 
-		<p class="description">This widget is used for the Click Points Plugin.</p>
+		<p class="description"><?php esc_html_e( 'This widget is used for the Click Points Plugin.', 'cpjr3' ) ?></p>
 
 		<?php
 	}
