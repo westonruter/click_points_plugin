@@ -73,5 +73,5 @@ function cpjr3_user_page_shortcode() {
  
 } //end cpjr3_user_page_shortcode
 
-add_shortcode( 'click-points', 'cpjr3_user_page_shortcode' ); 
+add_shortcode( 'click-points', 'cpjr3_user_page_shortcode' );
 

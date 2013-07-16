@@ -25,7 +25,7 @@ jQuery(document).ready( function() {
 
 
 
-   //Generate Spinner 
+   //Generate Spinner
 
       //Dynamically generate spinner div
 
@@ -97,13 +97,13 @@ jQuery(document).ready( function() {
 
             if(response.events.type == "success" && response.total_score.type == "success") {
 
-               message = "You just earned " + response.total_score.value + " points for " + response.events.event + "!" 
+               message = "You just earned " + response.total_score.value + " points for " + response.events.event + "!"
 
                pointsAlert( message );
                
             } else {
 
-               message = "Error processing the event.  Points not saved." 
+               message = "Error processing the event.  Points not saved."
 
                pointsAlert( message );
 
@@ -113,7 +113,7 @@ jQuery(document).ready( function() {
 
          }
 
-      })   
+      })
 
    })
 

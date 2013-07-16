@@ -24,21 +24,21 @@ include_once( 'widget.php' ); 			//Custom Widget
  *
  */
 
-function cpjr3_settings_link( $links ) { 
+function cpjr3_settings_link( $links ) {
 
 	//Get link to be generated
 
-	$settings_page = '<a href="' . admin_url('options-general.php?page=click-points/settings.php' ) .'">Settings</a>'; 
+	$settings_page = '<a href="' . admin_url('options-general.php?page=click-points/settings.php' ) .'">Settings</a>';
 
 	//Add to front of $links array
 
-	array_unshift( $links, $settings_page ); 
+	array_unshift( $links, $settings_page );
 
-	return $links; 
+	return $links;
 
 }
  
-$plugin = plugin_basename(__FILE__); 
+$plugin = plugin_basename(__FILE__);
 
 add_filter( "plugin_action_links_$plugin", 'cpjr3_settings_link' );
 
@@ -55,9 +55,9 @@ function cpjr3_enqueue_scripts() {
 
 	wp_register_script( 'cpjr3_rewards', WP_PLUGIN_URL . '/click-points/script-rewards.js', array( 'jquery' ) );
 
-	wp_localize_script( 'cpjr3_points', 'cpjr3_AJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );  
+	wp_localize_script( 'cpjr3_points', 'cpjr3_AJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
-	wp_localize_script( 'cpjr3_rewards', 'cpjr3_rewards_AJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );       
+	wp_localize_script( 'cpjr3_rewards', 'cpjr3_rewards_AJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 	wp_enqueue_script( 'jquery' );
 
@@ -67,7 +67,7 @@ function cpjr3_enqueue_scripts() {
 
 	wp_register_style( 'cpjr3_style', plugins_url( 'style.css', __FILE__ ), array(), '1.0', 'all' );
 
-	wp_enqueue_style( 'cpjr3_style' );  
+	wp_enqueue_style( 'cpjr3_style' );
 
 }
 

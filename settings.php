@@ -76,11 +76,11 @@ function cpjr3_settings_fn() {
 
 }
 
-function primary_section_cb() {  
+function primary_section_cb() {
 
-    echo '<p> ' . __( 'Select the Buttons that will display in the Click Points Widget.', 'cpjr3' ) . '</p>' ;  
+    echo '<p> ' . __( 'Select the Buttons that will display in the Click Points Widget.', 'cpjr3' ) . '</p>' ;
 
-}  
+}
 
 function check_like_settings() {
 
@@ -156,26 +156,26 @@ function check_tweet_settings() {
 function validate_cpjr3_settings( $input ) {
 
    /*
-    * Validation script by Tom McFarlin 
+    * Validation script by Tom McFarlin
     * https://github.com/tommcfarlin/WordPress-Settings-Sandbox
     *
     * This isn't the best way to vaildate checkboxes, obviously.
     * Need some work here.
     */
   
-    $output = array();  
+    $output = array();
        
-    foreach( $input as $key => $value ) {  
+    foreach( $input as $key => $value ) {
             
-        if( isset( $input[$key] ) ) {  
+        if( isset( $input[$key] ) ) {
            
-            $output[$key] = strip_tags( stripslashes( $input[ $key ] ) );  
+            $output[$key] = strip_tags( stripslashes( $input[ $key ] ) );
               
-        } 
+        }
           
-    }  
+    }
        
-    return apply_filters( 'validate_cpjr3_settings', $output, $input ); 
+    return apply_filters( 'validate_cpjr3_settings', $output, $input );
 
 }
 

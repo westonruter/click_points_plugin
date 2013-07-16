@@ -23,7 +23,7 @@ function cpjr3_rewards_shortcode() {
 	//generate random reward and assign points value
 
 	   	$rewards_array = array(
-	   		"Ham & Eggs", "Eight-Day-Old Donuts", "Big Box of Wishes", "Creepy Backrub", "An Extra Value Meal", 
+	   		"Ham & Eggs", "Eight-Day-Old Donuts", "Big Box of Wishes", "Creepy Backrub", "An Extra Value Meal",
 	   		"Handful of Quiet", "Frankincense & Myrrh", "Kentucky Fried WTF", "Trapper Keeper", "Mr. T-shirt", "Pocket Full of Sunshine",
 	   		"Commemorative Coins", "CK One", "Chicken Wopper", "Springsteen Poster", "Selena Gomez Tickets", "4 Fried Chickens & a Coke",
 	   		"Self-Fulfilling Prophecy", "Perpetual Hope", "Skrillex Coffee Mug", "Jolt Cola", "Unpaid Parking Ticket", "Assorted Loose Legos", "Garbage Pail Kids",
@@ -56,7 +56,7 @@ function cpjr3_rewards_shortcode() {
 
    		$amount = $rewards['amount'];
 
-   		$reward = $rewards['reward']; 
+   		$reward = $rewards['reward'];
 
    		$link = admin_url('admin-ajax.php?action=cpjr3_rewards_process&user_id_rw=' . esc_attr( $user_id ) . '&points_rw=' . esc_attr( $amount ) . '&events_rw=Purchased&reward_rw=' . esc_attr( $reward ) .'&nonce_rw=' . esc_attr( $nonce ) );
 
@@ -72,4 +72,4 @@ function cpjr3_rewards_shortcode() {
 
 }
 
-add_shortcode( 'click-points-rewards', 'cpjr3_rewards_shortcode' ); 
+add_shortcode( 'click-points-rewards', 'cpjr3_rewards_shortcode' );

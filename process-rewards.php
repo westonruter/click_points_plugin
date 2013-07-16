@@ -2,7 +2,7 @@
 
 /*
  *
- * Process Widget Points Form 
+ * Process Widget Points Form
  *
  */
 
@@ -18,7 +18,7 @@ function cpjr3_rewards_process() {
 
       exit( "Failed nonce verification." );
 
-   }   
+   }
 
    // get vars
 

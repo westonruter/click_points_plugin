@@ -23,19 +23,19 @@ Class Helpers {
 
 					if ( $timestamp >= $one_day_ago ) {
 
-						//extract points values from Action Array 
+						//extract points values from Action Array
 
-						$points = $value['points']; 
+						$points = $value['points'];
 
-						//if reward 
+						//if reward
 
 						if ( isset( $value['reward'] ) ) {
 
-							//make points negative 
+							//make points negative
 
 							$points = -1 * abs($points);
 
-						} 
+						}
 
 						//Add to $daily_points_earned
 
@@ -63,7 +63,7 @@ Class Helpers {
 
 		$output_array = $input_array[array_rand( $input_array )];
 
-	   	return $output_array;  
+	   	return $output_array;
 
 	} //End random_silliness
 
@@ -114,7 +114,7 @@ Class Helpers {
 
 		//create an array, 9 long...
 
-		$length = $length - 1; 
+		$length = $length - 1;
 
 	   	$i = 0;
 
@@ -128,7 +128,7 @@ Class Helpers {
 
 	   	} //wndwhile
 
-	   	return $rewards_listing; 
+	   	return $rewards_listing;
 
 	} // End create_rewards_listing
 
@@ -146,7 +146,7 @@ Class Helpers {
 
 		//Reorder List so lower Points Values show first
 
-		$this->reorder_array( $rewards_listing, $key ); 
+		$this->reorder_array( $rewards_listing, $key );
 
 		return $rewards_listing;
 

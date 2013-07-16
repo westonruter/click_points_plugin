@@ -23,7 +23,7 @@ jQuery(document).ready( function() {
    // End Popup Code
 
 
-   //Generate Spinner 
+   //Generate Spinner
 
       //Dynamically generate spinner div
 
@@ -95,7 +95,7 @@ jQuery(document).ready( function() {
 
             if( response.events.type == "success" && response.total_score.type == "success" ) {
 
-               message = "Congratulations!  You just " + response.events.event  + " for " + response.total_score.value + " points!" 
+               message = "Congratulations!  You just " + response.events.event  + " for " + response.total_score.value + " points!"
                
                pointsAlertRw( message );
                
@@ -107,7 +107,7 @@ jQuery(document).ready( function() {
 
             } else {
 
-               message = "Error processing the event.  Points not saved." 
+               message = "Error processing the event.  Points not saved."
 
                pointsAlertRw( message );
 
@@ -115,7 +115,7 @@ jQuery(document).ready( function() {
 
          }
 
-      })   
+      })
 
    })
 

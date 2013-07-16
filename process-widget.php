@@ -2,7 +2,7 @@
 
 /*
  *
- * Process Widget Points Form 
+ * Process Widget Points Form
  *
  */
 
@@ -12,15 +12,15 @@ add_action( 'wp_ajax_nopriv_cpjr3_process', 'cpjr3_must_login' );
 
 function cpjr3_process() {
 
-   $help = New Helpers; 
+   $help = New Helpers;
 
    if ( !wp_verify_nonce( $_REQUEST['nonce'], 'cpjr3_widget_nonce') ) {
 
       exit( "Failed nonce verification." );
 
-   }   
+   }
 
-   //get variables 
+   //get variables
 
    $user_id = $_REQUEST['user_id'];
 
@@ -31,7 +31,7 @@ function cpjr3_process() {
    //generate random noun
 
       $nouns_array = array(
-         "Unicorns", "the 2013 Buggati", "Cockapoos", "Pimento Loaf", "Clean Socks", 
+         "Unicorns", "the 2013 Buggati", "Cockapoos", "Pimento Loaf", "Clean Socks",
          "Hans Liszt", "Fresh Linen", "Asian Delicacies", "Raquel Welch", "Jan Brady", "Wayne Brady",
          "Commemorative Coins", "Drakkar Noir", "Convection Oven Safety", "Cranky Babies", "Selena Gomez Tickets", "Cream of Chicken Soup",
          "Exhaust Manifolds", "Art Garfunkel", "Kate Upton's Insoles", "Narcotics", "'Get Lucky' by Daft Punk", "Oodles of Noodles", "Pogs",

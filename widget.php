@@ -26,13 +26,13 @@ class cpjr3_widget extends WP_Widget {
  
     /** @see WP_Widget::widget -- do not rename this */
 
-    function widget( $args, $instance ) {	
+    function widget( $args, $instance ) {
 
         extract( $args );
 
         $title = apply_filters( 'widget_title', $instance['title'] );
 
-        echo $before_widget; 
+        echo $before_widget;
 
         if ( $title ) {
 
@@ -120,7 +120,7 @@ class cpjr3_widget extends WP_Widget {
 
             );
 
-            $options = get_option( 'cpjr3_settings' ); 
+            $options = get_option( 'cpjr3_settings' );
 
             $actions = array_keys( $actions_array );
 
@@ -155,7 +155,7 @@ class cpjr3_widget extends WP_Widget {
 
     }
 
-    function update( $new_instance, $old_instance ) {	
+    function update( $new_instance, $old_instance ) {
 
 		$instance = $old_instance;
 
@@ -164,7 +164,7 @@ class cpjr3_widget extends WP_Widget {
         return $instance;
     }
 
-    function form( $instance ) {	
+    function form( $instance ) {
  
         $title = esc_attr( $instance['title'] );
 
@@ -172,7 +172,7 @@ class cpjr3_widget extends WP_Widget {
 
          <p>
 
-          <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:' ); ?></label> 
+          <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:' ); ?></label>
 
           <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 
@@ -180,7 +180,7 @@ class cpjr3_widget extends WP_Widget {
 
         <p class="description">This widget is used for the Click Points Plugin.</p>
 
-        <?php 
+        <?php
     }
  
  
