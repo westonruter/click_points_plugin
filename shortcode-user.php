@@ -8,7 +8,7 @@
 
 function cpjr3_user_page_shortcode() {
 
-	$help = New Helpers;
+	$help = new CPJR3_Helpers();
 
 	//Start by gathering Vars
 
@@ -16,10 +16,10 @@ function cpjr3_user_page_shortcode() {
 
 	//Get current user
 	$current_user = wp_get_current_user();
-	
-		$username = $current_user->user_login;
 
-		$user_id =  $current_user->ID;
+	$username = $current_user->user_login;
+
+	$user_id =  $current_user->ID;
 
 	$score = get_user_meta( $user_id, 'cpjr3_score', true );
 
@@ -27,17 +27,17 @@ function cpjr3_user_page_shortcode() {
 
 	//Print Header
 
-	_e( '<h3>Points Totals for ' . $username . '</h3>', 'cpjr3' );
+	echo sprintf( __( '<h3>Points Totals for %s</h3>', 'cpjr3' ), $username );
 
 	//Total Points Earned
 
-	_e( '<p><strong>Total Points:</strong> ' . $score . '</p>', 'cpjr3' );
+	echo sprintf( _n( '<p><strong>Total Points:</strong> %s</p>', $score, 'cpjr3' ), $score );
 
 	//Calculate Daily Points Total
 
 	$todays_points = $help->calc_daily_points( $user_id, $time );
 
-	_e( '<p><strong>Points Earned in Last 24 Hours:</strong> ' . $todays_points . ' </p>', 'cpjr3' );
+	echo sprintf( _n( '<p><strong>Points Earned in Last 24 Hours:</strong> %s', $todays_points, 'cpjr3' ), $todays_points );
 
 	//Recent Points Earned
 
@@ -55,6 +55,7 @@ function cpjr3_user_page_shortcode() {
 
 			$offset = human_time_diff( $value, $time );
 
+			// @todo i18n the strings here using _n()
 			if( isset( $key['reward'] ) ) {
 
 				echo '<li>' . $key['action'] . ' for ' . $key['points'] . ' points (' . $offset . ' ago)</li>';
@@ -70,8 +71,7 @@ function cpjr3_user_page_shortcode() {
 		echo '</ul>';
 
 	}// if $events
- 
+
 } //end cpjr3_user_page_shortcode
 
-add_shortcode( 'click-points', 'cpjr3_user_page_shortcode' ); 
-
+add_shortcode( 'click-points', 'cpjr3_user_page_shortcode' );
