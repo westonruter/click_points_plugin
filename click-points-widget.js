@@ -7,51 +7,17 @@ jQuery(document).ready( function() {
 
       $div.hide();
 
-      $div.attr( 'id', 'overlay_box' );
+      $div.attr( 'id', 'overlay-box' );
 
    //Popup Code
 
    function pointsAlert( msg ){
 
-      jQuery("#overlay_box").html( msg );
+      jQuery("#overlay-box").html( msg );
 
-      jQuery("#overlay_box").fadeIn(500).delay(7000).fadeOut(500);
-
-      positionPopup();
+      jQuery("#overlay-box").fadeIn(500).delay(7000).fadeOut(500);
 
    }
-
-   //position the popup at the center of the page
-   function positionPopup(){
-
-      if(!jQuery("#overlay_box").is(':visible')){
-
-         return;
-
-      }
-
-         jQuery("#overlay_box").css( {
-
-            right: '10px',
-
-            bottom: '10px',
-
-            position:'fixed',
-
-            background: '#ffffff',
-
-            padding: '10px',
-
-            border: '1px solid #aaaaaa', 
-
-            'border-radius': '3px'
-
-         } );
-
-   }
-    
-   //maintain the popup position when browser resized
-   jQuery(window).bind('resize',positionPopup);
 
 
    // End Popup Code
@@ -77,8 +43,6 @@ jQuery(document).ready( function() {
 
          spinner.fadeIn(50);
 
-         positionSpinner();
-
       }
 
       function spinnerOut() {
@@ -87,36 +51,6 @@ jQuery(document).ready( function() {
 
       }
 
-      function positionSpinner(){
-
-      if( !spinner.is( ':visible' ) ){
-
-         return;
-
-      }
-
-         spinner.css( {
-
-            right: '10px',
-
-            bottom: '10px',
-
-            position:'fixed',
-
-            background: '#ffffff',
-
-            padding: '10px',
-
-            border: '1px solid #aaaaaa', 
-
-            'border-radius': '3px'
-
-         } );
-
-   }
-    
-   //maintain the popup position when browser resized
-   jQuery(window).bind('resize',positionSpinner);
 
    //End Spinner
 

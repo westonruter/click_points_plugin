@@ -4,3 +4,13 @@
 	width: 35px;
 	height: 35px;
 }
+
+#overlay-box, #overlay-box-rw, #spinner, #spinner-rw {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	background:#fff;
+	padding: 10px;
+	border:1px solid #aaa;
+	border-radius: 3px;
+}

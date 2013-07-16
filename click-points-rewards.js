@@ -8,52 +8,17 @@ jQuery(document).ready( function() {
 
       $div_rw.hide();
 
-      $div_rw.attr( 'id', 'overlay_box_rw' );
+      $div_rw.attr( 'id', 'overlay-box-rw' );
 
    //Popup Code
 
    function pointsAlertRw( msg ){
 
-      jQuery("#overlay_box_rw").html( msg );
+      jQuery("#overlay-box-rw").html( msg );
 
-      jQuery("#overlay_box_rw").fadeIn(500).delay(7000).fadeOut(500);
-
-      positionPopupRw();
+      jQuery("#overlay-box-rw").fadeIn(500).delay(7000).fadeOut(500);
 
    }
-
-   //position the popup at the center of the page
-   function positionPopupRw(){
-
-      if(!jQuery("#overlay_box_rw").is(':visible')){
-
-         return;
-
-      }
-
-         jQuery("#overlay_box_rw").css({
-
-            right: '10px',
-
-            bottom: '10px',
-
-            position:'fixed',
-
-            background: '#ffffff',
-
-            padding: '10px',
-
-            border: '1px solid #aaaaaa', 
-
-            'border-radius': '3px'
-
-         });
-
-   }
-    
-   //maintain the popup position when browser resized
-   jQuery(window).bind('resize',positionPopupRw);
-
 
    // End Popup Code
 
@@ -76,8 +41,6 @@ jQuery(document).ready( function() {
 
          spinnerRw.fadeIn(50);
 
-         positionSpinnerRw();
-
       }
 
       function spinnerOutRw() {
@@ -85,36 +48,6 @@ jQuery(document).ready( function() {
          spinnerRw.fadeOut(50);
 
       }
-
-      function positionSpinnerRw(){
-
-      if( !spinnerRw.is( ':visible' ) ){
-
-         return;
-
-      }
-         spinnerRw.css( {
-
-            right: '10px',
-
-            bottom: '10px',
-
-            position:'fixed',
-
-            background: '#ffffff',
-
-            padding: '10px',
-
-            border: '1px solid #aaaaaa', 
-
-            'border-radius': '3px'
-
-         } );
-
-   }
-    
-   //maintain the popup position when browser resized
-   jQuery(window).bind('resize',positionSpinnerRw);
 
    //End Spinner
 
