@@ -6,6 +6,7 @@ The Click Points Plugin is a WordPress novelty designed to display the author's 
 
 It is my hope that Click Points will help you get a feel for my experience level, and perhaps give you a little grin along the way.
 
+---
 
 ### Setup Instructions
 
@@ -17,19 +18,19 @@ It is my hope that Click Points will help you get a feel for my experience level
 
 4.  Create User Points Page with Shortcode
 
-* Create a Page (I recommend titling it "User Points") and use the [click-points] shortcode.
+	* Create a Page (I recommend titling it "User Points") and use the [click-points] shortcode.
 
 5.  Create Rewards Page with Shortcode
 
-* Create a Page (I recommend titling it "Rewards") and use the [click-points-rewards] shortcode.
+	* Create a Page (I recommend titling it "Rewards") and use the [click-points-rewards] shortcode.
 
 6.  Enjoy!
 
-* Start using Click Points by clicking on the buttons in the Click Points Widget. Each click will generate a fun little message about how you just earned your points.  
+	* Start using Click Points by clicking on the buttons in the Click Points Widget. Each click will generate a fun little message about how you just earned your points.  
 
-* Check on your progress by visiting your User Points Shortcode Page.
+	* Check on your progress by visiting your User Points Shortcode Page.
 
-* Cash in your Points for Rewards on your Rewards Shortcode Page.  These Rewards will be reflected on the User Points Shortcode Page, under "Recent Points". 
+	* Cash in your Points for Rewards on your Rewards Shortcode Page.  These Rewards will be reflected on the User Points Shortcode Page, under "Recent Points". 
 
 ---
 
