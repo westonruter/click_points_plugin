@@ -107,7 +107,7 @@ function check_share_settings() {
   }
 
    echo "<input type='checkbox' id='check_share' name='cpjr3_settings[check_share]' value='1' " . checked( 1, $options['check_share'], false ) . "/> <label for='check_share'>" . __( 'Share', 'cpjr3' ) . "</label>";
-   
+
 }
 
 function check_post_settings() {
@@ -121,7 +121,7 @@ function check_post_settings() {
   }
 
    echo "<input type='checkbox' id='check_post' name='cpjr3_settings[check_post]' value='1' " . checked( 1, $options['check_post'], false ) . "/> <label for='check_post'>" . __( 'Post', 'cpjr3' ) . "</label>";
-   
+
 }
 
 function check_link_settings() {
@@ -135,7 +135,7 @@ function check_link_settings() {
   }
 
    echo "<input type='checkbox' id='check_link' name='cpjr3_settings[check_link]' value='1' " . checked( 1, $options['check_link'], false ) . "/> <label for='check_link'>" . __( 'Link', 'cpjr3' ) . "</label>";
-   
+
 }
 
 function check_tweet_settings() {
@@ -149,7 +149,7 @@ function check_tweet_settings() {
   }
 
    echo "<input type='checkbox' id='check_tweet' name='cpjr3_settings[check_tweet]' value='1' " . checked( 1, $options['check_tweet'], false ) . "/> <label for='check_tweet'>" . __( 'Tweet', 'cpjr3' ) . "</label>";
-   
+
 }
 
 
@@ -162,19 +162,19 @@ function validate_cpjr3_settings( $input ) {
     * This isn't the best way to vaildate checkboxes, obviously.
     * Need some work here.
     */
-  
+
     $output = array();
-       
+
     foreach( $input as $key => $value ) {
-            
+
         if( isset( $input[$key] ) ) {
-           
+
             $output[$key] = strip_tags( stripslashes( $input[ $key ] ) );
-              
+
         }
-          
+
     }
-       
+
     return apply_filters( 'validate_cpjr3_settings', $output, $input );
 
 }

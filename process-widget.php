@@ -42,7 +42,7 @@ function cpjr3_process() {
       );
 
       // insert filter in case someone wants to edit the list of rewards
-      
+
       $nouns_array = apply_filters( 'nouns_list', $nouns_array );
 
       //call this "action" for clarity later on...

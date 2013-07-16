@@ -96,9 +96,9 @@ jQuery(document).ready( function() {
             if( response.events.type == "success" && response.total_score.type == "success" ) {
 
                message = "Congratulations!  You just " + response.events.event  + " for " + response.total_score.value + " points!"
-               
+
                pointsAlertRw( message );
-               
+
             } else if ( response.nsf == "NSF" ) {
 
                message = "Sorry. You do not have enough Points for that Reward."

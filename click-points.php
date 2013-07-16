@@ -37,7 +37,7 @@ function cpjr3_settings_link( $links ) {
 	return $links;
 
 }
- 
+
 $plugin = plugin_basename(__FILE__);
 
 add_filter( "plugin_action_links_$plugin", 'cpjr3_settings_link' );

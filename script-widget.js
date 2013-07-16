@@ -100,7 +100,7 @@ jQuery(document).ready( function() {
                message = "You just earned " + response.total_score.value + " points for " + response.events.event + "!"
 
                pointsAlert( message );
-               
+
             } else {
 
                message = "Error processing the event.  Points not saved."

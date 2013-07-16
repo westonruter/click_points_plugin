@@ -16,7 +16,7 @@ function cpjr3_user_page_shortcode() {
 
 	//Get current user
 	$current_user = wp_get_current_user();
-	
+
 		$username = $current_user->user_login;
 
 		$user_id =  $current_user->ID;
@@ -70,7 +70,7 @@ function cpjr3_user_page_shortcode() {
 		echo '</ul>';
 
 	}// if $events
- 
+
 } //end cpjr3_user_page_shortcode
 
 add_shortcode( 'click-points', 'cpjr3_user_page_shortcode' );

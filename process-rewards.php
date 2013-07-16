@@ -61,7 +61,7 @@ function cpjr3_rewards_process() {
    }// end check to see if user has enough points for reward
 
    //json encode
-   
+
    $json_result = $help->json_encode_result( $result );
 
    echo $json_result;
