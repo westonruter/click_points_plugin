@@ -17,6 +17,7 @@ function cpjr3_process() {
 	if ( !wp_verify_nonce( $_REQUEST['nonce'], 'cpjr3_widget_nonce') ) {
 
 		exit( "Failed nonce verification." );
+		// @todo This should use wp_send_json_error()
 
 	}
 
@@ -62,6 +63,7 @@ function cpjr3_process() {
 	$result = $help->save_process_results( $user_id, $event, $action, $points, false, $new_score );
 
 	//json encode
+	// @todo This should use wp_send_json_success()
 
 	$json_result = $help->json_encode_result( $result );
 

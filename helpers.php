@@ -257,6 +257,7 @@ class CPJR3_Helpers {
 	* Encodes results of data processing
 	*/
 
+	// @todo Why is it necessary to check for the XHR request header?
 	public function json_encode_result( $result ) {
 
 		if( !empty( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && strtolower( $_SERVER['HTTP_X_REQUESTED_WITH'] ) == 'xmlhttprequest' ) {
