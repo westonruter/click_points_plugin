@@ -9,13 +9,13 @@
 	Version: 1.0
  */
 
-include_once( 'settings.php' ); 		//Plugin Settings Page
-include_once( 'helpers.php' ); 			//Helpers Class
-include_once( 'process-widget.php' ); 	//Calculates points from Widget
-include_once( 'process-rewards.php' ); 	//Calculates points from Rewards
-include_once( 'shortcode-user.php' ); 	//User Page shortcode
-include_once( 'shortcode-rewards.php' ); //Rewards Page shortcode
-include_once( 'widget.php' ); 			//Custom Widget
+include_once( plugin_dir_path(__FILE__) . '/settings.php' );          //Plugin Settings Page
+include_once( plugin_dir_path(__FILE__) . '/helpers.php' );           //Helpers Class
+include_once( plugin_dir_path(__FILE__) . '/process-widget.php' );    //Calculates points from Widget
+include_once( plugin_dir_path(__FILE__) . '/process-rewards.php' );   //Calculates points from Rewards
+include_once( plugin_dir_path(__FILE__) . '/shortcode-user.php' );    //User Page shortcode
+include_once( plugin_dir_path(__FILE__) . '/shortcode-rewards.php' ); //Rewards Page shortcode
+include_once( plugin_dir_path(__FILE__) . '/widget.php' );            //Custom Widget
 
 
 /*
