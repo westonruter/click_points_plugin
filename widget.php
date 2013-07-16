@@ -15,6 +15,9 @@
 
 class cpjr3_widget extends WP_Widget {
 
+	static function register() {
+		register_widget( __CLASS__ );
+	}
 
 	/** constructor -- name this the same as the class above */
 
@@ -191,4 +194,4 @@ class cpjr3_widget extends WP_Widget {
 
 } // end class example_widget
 
-add_action( 'widgets_init', create_function( '', 'return register_widget( "cpjr3_widget" );' ) );
+add_action( 'widgets_init', array( 'cpjr3_widget', 'register' ) );
