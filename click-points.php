@@ -97,7 +97,7 @@ function cpjr3_activate() {
 
 	}
 
-    add_option( 'cpjr3_settings', $cpjr3_settings );
+	add_option( 'cpjr3_settings', $cpjr3_settings );
 }
 
 register_activation_hook( __FILE__, 'cpjr3_activate' );
@@ -124,9 +124,9 @@ function cpjr3_deactivate() {
 
 	foreach ( $all_user_ids as $user_id ) {
 
-	    delete_user_meta( $user_id, 'cpjr3_score' );
+		delete_user_meta( $user_id, 'cpjr3_score' );
 
-	    delete_user_meta( $user_id, 'cpjr3_events' );
+		delete_user_meta( $user_id, 'cpjr3_events' );
 
 	}
 
@@ -137,7 +137,7 @@ register_deactivation_hook( __FILE__, 'cpjr3_deactivate' );
 
 function cpjr3_textdomain() {
 
-     load_plugin_textdomain('cpjr3');
+	load_plugin_textdomain('cpjr3');
 }
 
 add_action('init', 'cpjr3_textdomain');

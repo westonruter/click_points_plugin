@@ -63,7 +63,7 @@ Class Helpers {
 
 		$output_array = $input_array[array_rand( $input_array )];
 
-	   	return $output_array;
+		return $output_array;
 
 	} //End random_silliness
 
@@ -77,29 +77,29 @@ Class Helpers {
 	private function reorder_array( &$array, $key ) {
 
 		//Re-sort $rewards_array so rewards appear in order of price
-   		//From http://stackoverflow.com/questions/2699086/sort-multidimensional-array-by-value-2
+		//From http://stackoverflow.com/questions/2699086/sort-multidimensional-array-by-value-2
 
 		$sorter = array();
 
-	    $ret = array();
+		$ret = array();
 
-	    reset ( $array );
+		reset ( $array );
 
-	    foreach ( $array as $ii => $va ) {
+		foreach ( $array as $ii => $va ) {
 
-	        $sorter[$ii] = $va[$key];
+			$sorter[$ii] = $va[$key];
 
-	    }
+		}
 
-	    asort ( $sorter );
+		asort ( $sorter );
 
-	    foreach ( $sorter as $ii => $va ) {
+		foreach ( $sorter as $ii => $va ) {
 
-	        $ret[$ii] = $array[$ii];
+			$ret[$ii] = $array[$ii];
 
-	    }
+		}
 
-	    $array = $ret;
+		$array = $ret;
 
 	}
 
@@ -116,19 +116,19 @@ Class Helpers {
 
 		$length = $length - 1;
 
-	   	$i = 0;
+		$i = 0;
 
-	   	while ( $i >= 0 && $i <= $length ) {
+		while ( $i >= 0 && $i <= $length ) {
 
-	   		$rewards_listing[$i]['reward'] = $this->random_silliness( $rewards_array );
+			$rewards_listing[$i]['reward'] = $this->random_silliness( $rewards_array );
 
-	   		$rewards_listing[$i]['amount'] = rand( 0, 1000 );
+			$rewards_listing[$i]['amount'] = rand( 0, 1000 );
 
-	   		$i++;
+			$i++;
 
-	   	} //wndwhile
+		} //wndwhile
 
-	   	return $rewards_listing;
+		return $rewards_listing;
 
 	} // End create_rewards_listing
 
@@ -140,7 +140,7 @@ Class Helpers {
 
 	public function generate_rewards( $rewards_array, $length, $key ) {
 
-	   	// Create List of Reward/Point pairs
+		// Create List of Reward/Point pairs
 
 		$rewards_listing = $this->create_rewards_listing( $rewards_array, 9 );
 
@@ -161,42 +161,42 @@ Class Helpers {
 
 	private function save_event( $user_id, $event, $action, $points, $is_reward ) {
 
-	   //Add Events to User's event meta
+		//Add Events to User's event meta
 
-	   $events_array = get_user_meta( $user_id, 'cpjr3_events', true );
+		$events_array = get_user_meta( $user_id, 'cpjr3_events', true );
 
-	   $time = current_time( 'timestamp', 1 );
+		$time = current_time( 'timestamp', 1 );
 
-	   $events_array[$time]['action'] = $event . " " . $action;
+		$events_array[$time]['action'] = $event . " " . $action;
 
-	   $latest_event = $events_array[$time]['action'];
+		$latest_event = $events_array[$time]['action'];
 
-	   $events_array[$time]['points'] = $points;
+		$events_array[$time]['points'] = $points;
 
-	   if ( $is_reward === true ) {
+		if ( $is_reward === true ) {
 
-		   //designate this event as a reward
-	       $events_array[$time]['reward'] = 'reward';
+			//designate this event as a reward
+			$events_array[$time]['reward'] = 'reward';
 
-       }
+		}
 
-	   $updated_events = update_user_meta( $user_id, 'cpjr3_events', $events_array );
+		$updated_events = update_user_meta( $user_id, 'cpjr3_events', $events_array );
 
-	   if( $updated_events === false ) {
+		if( $updated_events === false ) {
 
-	      $event_result['events']['type'] = 'error';
+			$event_result['events']['type'] = 'error';
 
-	   }
+		}
 
-	   else {
+		else {
 
-	      $event_result['events']['type'] = 'success';
+			$event_result['events']['type'] = 'success';
 
-	      $event_result['events']['event'] = $latest_event; //most recent event
+			$event_result['events']['event'] = $latest_event; //most recent event
 
-	    }
+		}
 
-	    return $event_result;
+		return $event_result;
 
 	} // save_events
 
@@ -211,17 +211,17 @@ Class Helpers {
 
 		$updated_score = update_user_meta( $user_id, 'cpjr3_score', $new_total_score );
 
-		   if( $updated_score === false ) {
+			if( $updated_score === false ) {
 
-		      $score_result['total_score']['type'] = 'error';
+				$score_result['total_score']['type'] = 'error';
 
-		   } else {
+			} else {
 
-		      $score_result['total_score']['type'] = 'success';
+				$score_result['total_score']['type'] = 'success';
 
-		      $score_result['total_score']['value'] = $points;
+				$score_result['total_score']['value'] = $points;
 
-		   }
+			}
 
 		return $score_result;
 
@@ -261,15 +261,15 @@ Class Helpers {
 
 		if( !empty( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && strtolower( $_SERVER['HTTP_X_REQUESTED_WITH'] ) == 'xmlhttprequest' ) {
 
-		      $json_result = json_encode( $result );
+			$json_result = json_encode( $result );
 
-		      return $json_result;
+			return $json_result;
 
 		} else {
 
-	      header( "Location: " . $_SERVER["HTTP_REFERER"] );
+			header( "Location: " . $_SERVER["HTTP_REFERER"] );
 
-	   }
+		}
 
 	} //end json_encode_result
 

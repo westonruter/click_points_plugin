@@ -1,122 +1,122 @@
 jQuery(document).ready( function() {
 
-   //Use Rw suffix to prevent conflicts with click-points.js
+	//Use Rw suffix to prevent conflicts with click-points.js
 
-   //Dynamically generate popup div
+	//Dynamically generate popup div
 
-   var $div_rw = jQuery('<div />').appendTo('body');
+	var $div_rw = jQuery('<div />').appendTo('body');
 
-      $div_rw.hide();
+		$div_rw.hide();
 
-      $div_rw.attr( 'id', 'overlay-box-rw' );
+		$div_rw.attr( 'id', 'overlay-box-rw' );
 
-   //Popup Code
+	//Popup Code
 
-   function pointsAlertRw( msg ){
+	function pointsAlertRw( msg ){
 
-      jQuery("#overlay-box-rw").html( msg );
+		jQuery("#overlay-box-rw").html( msg );
 
-      jQuery("#overlay-box-rw").fadeIn(500).delay(7000).fadeOut(500);
+		jQuery("#overlay-box-rw").fadeIn(500).delay(7000).fadeOut(500);
 
-   }
+	}
 
-   // End Popup Code
-
-
-   //Generate Spinner
-
-      //Dynamically generate spinner div
-
-      var $spindiv_rw = jQuery('<div />').appendTo('body');
-
-      $spindiv_rw.hide();
-
-      $spindiv_rw.attr( 'id', 'spinner-rw' );
-
-      var spinnerRw = jQuery( '#spinner-rw' );
-
-      spinnerRw.prepend('<div id="spinner-rw-image"></div>');
-
-      function spinnerInRw() {
-
-         spinnerRw.fadeIn(50);
-
-      }
-
-      function spinnerOutRw() {
-
-         spinnerRw.fadeOut(50);
-
-      }
-
-   //End Spinner
+	// End Popup Code
 
 
+	//Generate Spinner
+
+		//Dynamically generate spinner div
+
+		var $spindiv_rw = jQuery('<div />').appendTo('body');
+
+		$spindiv_rw.hide();
+
+		$spindiv_rw.attr( 'id', 'spinner-rw' );
+
+		var spinnerRw = jQuery( '#spinner-rw' );
+
+		spinnerRw.prepend('<div id="spinner-rw-image"></div>');
+
+		function spinnerInRw() {
+
+			spinnerRw.fadeIn(50);
+
+		}
+
+		function spinnerOutRw() {
+
+			spinnerRw.fadeOut(50);
+
+		}
+
+	//End Spinner
 
 
-   //Click Points Ajax
 
 
-   jQuery(".cpjr3-rewards-button").click( function() {
+	//Click Points Ajax
 
-      user_id = jQuery(this).attr("data-user");
 
-      nonce = jQuery(this).attr("data-nonce");
+	jQuery(".cpjr3-rewards-button").click( function() {
 
-      points = jQuery(this).attr("data-points");
+		user_id = jQuery(this).attr("data-user");
 
-      events = jQuery(this).attr("data-events");
+		nonce = jQuery(this).attr("data-nonce");
 
-      reward = jQuery(this).attr("data-reward");
+		points = jQuery(this).attr("data-points");
 
-      jQuery.ajax({
+		events = jQuery(this).attr("data-events");
 
-         type : "post",
+		reward = jQuery(this).attr("data-reward");
 
-         dataType : "json",
+		jQuery.ajax({
 
-         url : cpjr3_rewards_AJAX.ajaxurl,
+			type : "post",
 
-         data : {action: "cpjr3_rewards_process", user_id_rw : user_id, nonce_rw: nonce, points_rw: points, events_rw: events, reward_rw: reward },
+			dataType : "json",
 
-         beforeSend: function() {
+			url : cpjr3_rewards_AJAX.ajaxurl,
 
-                spinnerInRw();
+			data : {action: "cpjr3_rewards_process", user_id_rw : user_id, nonce_rw: nonce, points_rw: points, events_rw: events, reward_rw: reward },
 
-         },
+			beforeSend: function() {
 
-         complete: function() {
+					 spinnerInRw();
 
-                spinnerOutRw();
+			},
 
-         },
+			complete: function() {
 
-         success: function(response) {
+					 spinnerOutRw();
 
-            if( response.events.type == "success" && response.total_score.type == "success" ) {
+			},
 
-               message = "Congratulations!  You just " + response.events.event  + " for " + response.total_score.value + " points!"
+			success: function(response) {
 
-               pointsAlertRw( message );
+				if( response.events.type == "success" && response.total_score.type == "success" ) {
 
-            } else if ( response.nsf == "NSF" ) {
+					message = "Congratulations!  You just " + response.events.event  + " for " + response.total_score.value + " points!"
 
-               message = "Sorry. You do not have enough Points for that Reward."
+					pointsAlertRw( message );
 
-               pointsAlertRw( message );
+				} else if ( response.nsf == "NSF" ) {
 
-            } else {
+					message = "Sorry. You do not have enough Points for that Reward."
 
-               message = "Error processing the event.  Points not saved."
+					pointsAlertRw( message );
 
-               pointsAlertRw( message );
+				} else {
 
-            }
+					message = "Error processing the event.  Points not saved."
 
-         }
+					pointsAlertRw( message );
 
-      })
+				}
 
-   })
+			}
+
+		})
+
+	})
 
 })
