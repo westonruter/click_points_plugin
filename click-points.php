@@ -51,9 +51,9 @@ add_filter( "plugin_action_links_$plugin", 'cpjr3_settings_link' );
 
 function cpjr3_enqueue_scripts() {
 
-	wp_register_script( 'cpjr3_points', WP_PLUGIN_URL . '/click-points/click-points-widget.js', array( 'jquery' ) );
+	wp_register_script( 'cpjr3_points', WP_PLUGIN_URL . '/click-points/script-widget.js', array( 'jquery' ) );
 
-	wp_register_script( 'cpjr3_rewards', WP_PLUGIN_URL . '/click-points/click-points-rewards.js', array( 'jquery' ) );
+	wp_register_script( 'cpjr3_rewards', WP_PLUGIN_URL . '/click-points/script-rewards.js', array( 'jquery' ) );
 
 	wp_localize_script( 'cpjr3_points', 'cpjr3_AJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );  
 
