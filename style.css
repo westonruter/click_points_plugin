@@ -1,0 +1,6 @@
+
+#spinner-image, #spinner-rw-image {
+	background: url(spinner.gif) no-repeat;
+	width: 35px;
+	height: 35px;
+}
