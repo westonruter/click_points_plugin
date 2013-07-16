@@ -8,25 +8,27 @@ It is my hope that Click Points will help you get a feel for my experience level
 
 ### Setup Instructions
 
-***A. Install/Activate Click Points Plugin***
+***Install/Activate Click Points Plugin***
 
-***B. Customize Plugin Settings***
+This plugin installs just like any other WordPress Plugin.
+
+***Customize Plugin Settings***
 
 Navigate to Settings > Click Points.  Select which Action Buttons you want to display in the widget. 
 
-***C. Activate Click Points Widget***
+***Activate Click Points Widget***
 
 There are no settings on this widget.  Just add it to a sidebar and you're ready to go!
 
-***D. Create User Points Page with Shortcode***
+***Create User Points Page with Shortcode***
 
 Create a Page (I recommend titling it "User Points") and use the [click-points] shortcode.  This Shortcode displays a user's points earned, as well as what Events they have clicked to earn/spend points.   
 
-***E. Create Rewards Page with Shortcode***
+***Create Rewards Page with Shortcode***
 
 Create a Page (I recommend titling it "Rewards") and use the [click-points-rewards] shortcode.  This page displays Rewards to be purchased with your points.
 
-***F. Enjoy!***
+***Enjoy!***
 
 Start using Click Points by clicking on the buttons in the Click Points Widget. Each click will generate a fun little message about how you just earned your points.  
 
