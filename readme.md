@@ -1,3 +1,5 @@
+# Click Points Plugin
+
 Introduction
 
 The Click Points Plugin is a WordPress novelty designed to display the author's abilities much more than it is to actually be useful.  The premise of the plugin is to claim virtual Rewards by completing events (clicking buttons) to earn Points.  The events are buttons displayed in a sidebar widget.  When clicked, the buttons award points to the user, along with a funny little message explaining why they got the points.  Points totals can be viewed on a User Points Page (generated via shortcode), including a listing of the ways the points were earned.  Finally, points can be redeemed for imaginary Rewards on a Rewards Page (again, generated via shortcode).  
