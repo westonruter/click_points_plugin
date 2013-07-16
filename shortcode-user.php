@@ -8,7 +8,7 @@
 
 function cpjr3_user_page_shortcode() {
 
-	$help = New Helpers;
+	$help = new CPJR3_Helpers();
 
 	//Start by gathering Vars
 

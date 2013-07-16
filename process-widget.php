@@ -12,7 +12,7 @@ add_action( 'wp_ajax_nopriv_cpjr3_process', 'cpjr3_must_login' );
 
 function cpjr3_process() {
 
-	$help = New Helpers;
+	$help = new CPJR3_Helpers();
 
 	if ( !wp_verify_nonce( $_REQUEST['nonce'], 'cpjr3_widget_nonce') ) {
 

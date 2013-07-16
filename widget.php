@@ -13,7 +13,7 @@
 
 
 
-class cpjr3_widget extends WP_Widget {
+class CPJR3_Widget extends WP_Widget {
 
 	static function register() {
 		register_widget( __CLASS__ );
@@ -21,7 +21,7 @@ class cpjr3_widget extends WP_Widget {
 
 	/** constructor -- name this the same as the class above */
 
-	function cpjr3_widget() {
+	function CPJR3_Widget() {
 
 		parent::WP_Widget( false, $name = __( 'Click Points Widget', 'cpjr3' ) );
 
@@ -194,4 +194,4 @@ class cpjr3_widget extends WP_Widget {
 
 } // end class example_widget
 
-add_action( 'widgets_init', array( 'cpjr3_widget', 'register' ) );
+add_action( 'widgets_init', array( 'CPJR3_Widget', 'register' ) );

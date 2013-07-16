@@ -1,6 +1,6 @@
 <?php
 
-Class Helpers {
+class CPJR3_Helpers {
 
 	/**
 	* Calculates Points earned during the last 24 hour period.
