@@ -30,24 +30,24 @@ function cpjr3_process() {
 
 	//generate random noun
 
-		$nouns_array = array(
-			"Unicorns", "the 2013 Buggati", "Cockapoos", "Pimento Loaf", "Clean Socks",
-			"Hans Liszt", "Fresh Linen", "Asian Delicacies", "Raquel Welch", "Jan Brady", "Wayne Brady",
-			"Commemorative Coins", "Drakkar Noir", "Convection Oven Safety", "Cranky Babies", "Selena Gomez Tickets", "Cream of Chicken Soup",
-			"Exhaust Manifolds", "Art Garfunkel", "Kate Upton's Insoles", "Narcotics", "'Get Lucky' by Daft Punk", "Oodles of Noodles", "Pogs",
-			"Chubby Checker", "Interrobangs", "O.P.P.", "Moist Towelettes", "Two Turtle Doves", "Sex Panther by Odeon", "The Holy Hand Grenade", "Friday the 13th",
-			"Vampire Weekend", "Chicken Lips", "Weston Ruter", "Frankie Jarrett", "Fortune Cookies", "Russian Novelists", "Marxist Culture", "The Commonwealth of Virgina", "The Dude",
-			"Courtney P. Vance", "Old Spice Commercials", "Turducken", "Insomnia", "Malaise", "Rusty Screwdrivers", "Simple Machines", "Waif Memes",
-			"The Truffle Shuffle", "Flux Capacitors", "TARDIS", "Magnetic Bumper Stickers", "Grumpy Cat", "European Football", "Pepper Gravy", "Deep-Fried Confections"
-		);
+	$nouns_array = array(
+		"Unicorns", "the 2013 Buggati", "Cockapoos", "Pimento Loaf", "Clean Socks",
+		"Hans Liszt", "Fresh Linen", "Asian Delicacies", "Raquel Welch", "Jan Brady", "Wayne Brady",
+		"Commemorative Coins", "Drakkar Noir", "Convection Oven Safety", "Cranky Babies", "Selena Gomez Tickets", "Cream of Chicken Soup",
+		"Exhaust Manifolds", "Art Garfunkel", "Kate Upton's Insoles", "Narcotics", "'Get Lucky' by Daft Punk", "Oodles of Noodles", "Pogs",
+		"Chubby Checker", "Interrobangs", "O.P.P.", "Moist Towelettes", "Two Turtle Doves", "Sex Panther by Odeon", "The Holy Hand Grenade", "Friday the 13th",
+		"Vampire Weekend", "Chicken Lips", "Weston Ruter", "Frankie Jarrett", "Fortune Cookies", "Russian Novelists", "Marxist Culture", "The Commonwealth of Virgina", "The Dude",
+		"Courtney P. Vance", "Old Spice Commercials", "Turducken", "Insomnia", "Malaise", "Rusty Screwdrivers", "Simple Machines", "Waif Memes",
+		"The Truffle Shuffle", "Flux Capacitors", "TARDIS", "Magnetic Bumper Stickers", "Grumpy Cat", "European Football", "Pepper Gravy", "Deep-Fried Confections"
+	);
 
-		// insert filter in case someone wants to edit the list of rewards
+	// insert filter in case someone wants to edit the list of rewards
 
-		$nouns_array = apply_filters( 'nouns_list', $nouns_array );
+	$nouns_array = apply_filters( 'nouns_list', $nouns_array );
 
-		//call this "action" for clarity later on...
+	//call this "action" for clarity later on...
 
-		$action = $help->random_silliness( $nouns_array );
+	$action = $help->random_silliness( $nouns_array );
 
 	//Add Points to User's Total Score
 

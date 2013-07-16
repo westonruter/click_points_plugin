@@ -17,9 +17,9 @@ function cpjr3_user_page_shortcode() {
 	//Get current user
 	$current_user = wp_get_current_user();
 
-		$username = $current_user->user_login;
+	$username = $current_user->user_login;
 
-		$user_id =  $current_user->ID;
+	$user_id =  $current_user->ID;
 
 	$score = get_user_meta( $user_id, 'cpjr3_score', true );
 
