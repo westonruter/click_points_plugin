@@ -148,8 +148,8 @@ class CPJR3_Widget extends WP_Widget {
 
 				if( $action["active"] == 1 ) {
 
-					$$action["link"] = admin_url('admin-ajax.php?action=cpjr3_process&user_id=' . esc_attr( $user_id ) . '&points=' . esc_attr( $action["points"] ) . '&events= ' . esc_attr( $action["event"] ) . '&nonce=' . esc_attr( $nonce ) );
-					echo '<p><button class="cpjr3-button" data-user="' . esc_attr( $user_id ) . '" data-nonce="' . esc_attr( $nonce )  . '" data-events="' . esc_attr( $action["event"] ) . '" data-points="' . esc_attr( $action["points"] ) . '" href="' . esc_attr( $$action["link"] ) . '">' . esc_attr( $action["title"] ) . ' +' . esc_attr( $action["points"] ) . 'pts</button></p>';
+					$action["link"] = admin_url('admin-ajax.php?action=cpjr3_process&user_id=' . esc_attr( $user_id ) . '&points=' . esc_attr( $action["points"] ) . '&events= ' . esc_attr( $action["event"] ) . '&nonce=' . esc_attr( $nonce ) );
+					echo '<p><button class="cpjr3-button" data-user="' . esc_attr( $user_id ) . '" data-nonce="' . esc_attr( $nonce )  . '" data-events="' . esc_attr( $action["event"] ) . '" data-points="' . esc_attr( $action["points"] ) . '" href="' . esc_attr( $action["link"] ) . '">' . esc_attr( $action["title"] ) . ' +' . esc_attr( $action["points"] ) . 'pts</button></p>';
 				}
 
 			}
